@@ -74,6 +74,7 @@
                         <outlet property="backImg" destination="NKM-mh-0p7" id="7Oc-Fu-FZT"/>
                         <outlet property="imageView" destination="mIC-dM-2Ky" id="6BZ-jb-wXE"/>
                         <outlet property="nextImg" destination="vBb-JG-KYA" id="OA2-Gx-gct"/>
+                        <outlet property="startstop" destination="f4r-6l-xM3" id="OPn-0U-ekc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imageView.image = UIImage(named: "1.jpg")
+        startstop.setTitle("再生", for: .normal)
     }
 
 //進むボタン
@@ -85,6 +86,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var backImg: UIButton!
     
+    @IBOutlet weak var startstop: UIButton!
+    
+    
+//    画面遷移ボタン
     @IBAction func buttonImg(_ sender: Any) {
         if self.timer != nil{
             self.timer_sec = 0
@@ -92,6 +97,7 @@ class ViewController: UIViewController {
             self.timer = nil
             nextImg.isEnabled = true
             backImg.isEnabled = true
+            startstop.setTitle("再生", for: .normal)
         }
         
         
@@ -107,6 +113,7 @@ class ViewController: UIViewController {
             self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector (updateTimer(_:)), userInfo: nil, repeats: true)
             nextImg.isEnabled = false
             backImg.isEnabled = false
+            startstop.setTitle("停止", for: .normal)
         }
         else {                 //タイマー停止
             
@@ -115,6 +122,7 @@ class ViewController: UIViewController {
             self.timer = nil
             nextImg.isEnabled = true
             backImg.isEnabled = true
+            startstop.setTitle("再生", for: .normal)
             
         }
         
