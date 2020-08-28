@@ -79,19 +79,43 @@ class ViewController: UIViewController {
     }
     
     
-    @IBOutlet weak var timerlabel: UILabel!
-    
-    //    再生/停止ボタン
-    @IBAction func startstop(_ sender: Any) {
-        if self.timer == nil{   //タイマー始動
-            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector (updateTimer(_:)), userInfo: nil, repeats: true)
-            
+   
 
-        }
-        else {                 //タイマー停止
+    @IBOutlet weak var nextImg: UIButton!
+    
+    @IBOutlet weak var backImg: UIButton!
+    
+    @IBAction func buttonImg(_ sender: Any) {
+        if self.timer != nil{
             self.timer_sec = 0
             self.timer.invalidate()
             self.timer = nil
+            nextImg.isEnabled = true
+            backImg.isEnabled = true
+        }
+        
+        
+    }
+    
+    
+    
+    
+    //    再生/停止ボタン
+    @IBAction func startstop(_ sender: Any) {
+        
+        if self.timer == nil{   //タイマー始動
+            self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector (updateTimer(_:)), userInfo: nil, repeats: true)
+            nextImg.isEnabled = false
+            backImg.isEnabled = false
+        }
+        else {                 //タイマー停止
+            
+            self.timer_sec = 0
+            self.timer.invalidate()
+            self.timer = nil
+            nextImg.isEnabled = true
+            backImg.isEnabled = true
+            
         }
         
 

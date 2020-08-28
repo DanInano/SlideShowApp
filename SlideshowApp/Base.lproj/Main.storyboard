@@ -26,7 +26,7 @@
                                 <rect key="frame" x="284" y="557" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rX6-49-4c6"/>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oaQ-Fp-fS1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4r-6l-xM3">
@@ -50,6 +50,7 @@
                                     <constraint firstAttribute="width" constant="376" id="gq9-HU-fae"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="buttonImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ta7-dP-ZbI"/>
                                     <segue destination="hDJ-8U-sZv" kind="show" id="zcG-R0-EgT"/>
                                 </connections>
                             </button>
@@ -70,7 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backImg" destination="NKM-mh-0p7" id="7Oc-Fu-FZT"/>
                         <outlet property="imageView" destination="mIC-dM-2Ky" id="6BZ-jb-wXE"/>
+                        <outlet property="nextImg" destination="vBb-JG-KYA" id="OA2-Gx-gct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
